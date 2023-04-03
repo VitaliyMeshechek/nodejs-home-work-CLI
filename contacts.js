@@ -52,8 +52,3 @@ module.exports = {
    addContact,
    removeContact,
 }
-
-// node index.js -a list
-// node index.js -a get -i "ZoXMgqgSMLtkrmSIk8dDp"
-// node index.js -a add -n "Donald Trump" -e "donald.trump@gmail.com" -p "(201) 123-4565"
-// node index.js -a remove -i

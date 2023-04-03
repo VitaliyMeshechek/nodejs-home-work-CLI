@@ -15,22 +15,22 @@ const contact = require('./contacts');
       switch (action) {
         case "list":
           const listContacts = await contact.listContacts();
-          console.log(listContacts);
+          console.table(listContacts);
           break;
     
         case "get":
           const getContact = await contact.getContactById(id);
-          console.log(getContact);
+          console.table(getContact);
           break;
     
         case "add":
           const newContact = await contact.addContact({id, name, email, phone});
-          console.log(newContact);
+          console.table(newContact);
           break;
     
         case "remove":
           const removeContact = await contact.removeContact(id);
-          console.log(removeContact);
+          console.table(removeContact);
           break;
     
         default:
@@ -49,7 +49,7 @@ const contact = require('./contacts');
 
    program.parse(process.argv);
 
-   const argv = program.opts();
+   const argv = program.opts(); 
 
    invokeAction(argv);
     
